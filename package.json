@@ -1,0 +1,15 @@
+{
+    "name": "scriptinjector",
+    "version": "0.0.0",
+    "main": "scriptinjector.js",
+    "scripts": {
+        "start": "node scriptinjector.js",
+        "compile": "google-closure-compiler --compilation_level=bundle --js=scriptinjector.js --js_output_file=scriptinjector.min.js"
+    },
+    "repository": "https://github.com/Richienb/scriptinjector.git",
+    "author": "Richie Bendall <richiebendall@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "google-closure-compiler": "^20190301.0.0"
+    }
+}
