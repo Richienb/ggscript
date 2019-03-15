@@ -1,7 +1,7 @@
 [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/ggscript/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/ggscript)
 [![CodeFactor Score](https://www.codefactor.io/repository/github/Richienb/ggscript/badge?style=for-the-badge)](https://www.codefactor.io/repository/github/Richienb/ggscript)
 
-# Script Injector
+# GG Script
 
 [![NPM](https://nodei.co/npm/ggscript.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ggscript)
 
