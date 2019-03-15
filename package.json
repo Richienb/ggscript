@@ -1,12 +1,12 @@
 {
-    "name": "scriptrunner",
+    "name": "ggscript",
     "version": "0.0.0",
-    "main": "scriptrunner.js",
+    "main": "ggscript.js",
     "scripts": {
-        "start": "node scriptrunner.js",
-        "compile": "google-closure-compiler --compilation_level=bundle --js=scriptrunner.js --js_output_file=scriptrunner.min.js"
+        "start": "node ggscript.js",
+        "compile": "google-closure-compiler --compilation_level=bundle --js=ggscript.js --js_output_file=ggscript.min.js"
     },
-    "repository": "https://github.com/Richienb/scriptrunner.git",
+    "repository": "https://github.com/Richienb/ggscript.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "dependencies": {

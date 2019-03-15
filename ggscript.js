@@ -1,4 +1,4 @@
-const ScriptRunner = src => new Promise((resolve, reject) => {
+const GGScript = src => new Promise((resolve, reject) => {
     const total = typeof src === "object" ? src.length : 1
     let done = 0
     src.forEach((i) => {
@@ -19,5 +19,5 @@ const ScriptRunner = src => new Promise((resolve, reject) => {
 })
 
 export default {
-    ScriptRunner
+    GGScript
 }
