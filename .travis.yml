@@ -14,7 +14,7 @@ install:
 
 script:
     - yarn compile
-    - node scriptinjector.min.js
+    - node scriptrunner.min.js
     - if [ -n "$TRAVIS_TAG" ]; then npm version $TRAVIS_TAG; fi
 
 deploy:
@@ -24,7 +24,7 @@ deploy:
       api_key:            $npm_token
       on:
           tags:           true
-          repo:           Richienb/scriptinjector
+          repo:           Richienb/scriptrunner
 
     -   provider:         releases
         api_key:          $github_token
@@ -33,4 +33,4 @@ deploy:
         skip_cleanup:     true
         on:
             tags:           true
-            repo:           Richienb/scriptinjector
+            repo:           Richienb/scriptrunner

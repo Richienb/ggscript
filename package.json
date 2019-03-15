@@ -1,12 +1,12 @@
 {
-    "name": "scriptinjector",
+    "name": "scriptrunner",
     "version": "0.0.0",
-    "main": "scriptinjector.js",
+    "main": "scriptrunner.js",
     "scripts": {
-        "start": "node scriptinjector.js",
-        "compile": "google-closure-compiler --compilation_level=bundle --js=scriptinjector.js --js_output_file=scriptinjector.min.js"
+        "start": "node scriptrunner.js",
+        "compile": "google-closure-compiler --compilation_level=bundle --js=scriptrunner.js --js_output_file=scriptrunner.min.js"
     },
-    "repository": "https://github.com/Richienb/scriptinjector.git",
+    "repository": "https://github.com/Richienb/scriptrunner.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "dependencies": {
