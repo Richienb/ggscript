@@ -24,6 +24,8 @@ const GGScript = (src, {
 
     if (strategy === "inject") {
         src.forEach((i) => {
+            if (!document.head) reject(ReferenceError(`Unable to find document header.`))
+
             // Create script element
             const script = document.createElement('script')
 
@@ -58,6 +60,24 @@ const GGScript = (src, {
                         // If running code failed
                         reject(i, err)
                     }
+                }).catch((err) => {
+                    // If code fetch failed
+                    reject(i, err)
+                })
+            }).catch((err) => {
+                // If code fetch failed
+                reject(i, err)
+            })
+        })
+    } else if (strategy === "href") {
+        if (!window.location.href) reject(ReferenceError(`Unable to find href object.`))
+        src.forEach((i) => {
+            // Fetch the content of the URL
+            fetch(i).then((res) => {
+                res.text().then((text) => {
+                    // Run the code
+                    window.location.href = "javascript:" + encodeURIComponent(text)
+                    jsLoaded(src)
                 }).catch((err) => {
                     // If code fetch failed
                     reject(i, err)

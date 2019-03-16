@@ -41,6 +41,6 @@ GGScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", {
 
 ### Options
 
-- `strategy`: The strategy to use to run the JavaScript. Can be `inject` or `eval`. Default is automatic.
+- `strategy`: The strategy to use to run the JavaScript. Can be `inject`, `eval` or `href`. Default is automatically detected.
 
 - `injectasync`: Load scripts asyncronously when injecting. Default is `true`.
