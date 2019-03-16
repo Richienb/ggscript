@@ -1,5 +1,6 @@
 {
     "name": "ggscript",
+    "description": "Inject scripts into any website.",
     "version": "0.0.0",
     "main": "ggscript.js",
     "scripts": {
@@ -9,6 +10,12 @@
     "repository": "https://github.com/Richienb/ggscript.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
+    "keywords": [
+        "script",
+        "inject",
+        "js",
+        "javascript"
+    ],
     "devDependencies": {
         "google-closure-compiler": "^20190301.0.0"
     }
