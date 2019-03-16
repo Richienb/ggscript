@@ -32,4 +32,15 @@ GGScript(["https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", "
 GGScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js").then((src) => {
     console.log("Finished loading " + src)
 })
+
+// Custom options
+GGScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", {
+    strategy: "eval"
+})
 ```
+
+### Options
+
+- `strategy`: The strategy to use to run the JavaScript. Can be `inject` or `eval`. Default is automatic.
+
+- `injectasync`: Load scripts asyncronously when injecting. Default is `true`.
