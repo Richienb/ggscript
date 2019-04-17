@@ -17,6 +17,6 @@
         "javascript"
     ],
     "devDependencies": {
-        "google-closure-compiler": "^20190301.0.0"
+        "google-closure-compiler": "^20190325.0.0"
     }
 }
