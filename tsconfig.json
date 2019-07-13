@@ -3,7 +3,6 @@
         "target": "es5",
         "lib": ["es2017", "dom"],
         "moduleResolution": "node",
-        "module": "umd",
         "declaration": true,
         "outDir": "./dist",
         "strict": true,
