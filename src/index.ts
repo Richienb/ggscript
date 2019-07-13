@@ -25,7 +25,7 @@
  */
 
 import axios from "axios"
-import * as Promise from "bluebird"
+import { Promise } from "bluebird"
 
 /**
  * Inject scripts into any website.
