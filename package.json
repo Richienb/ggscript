@@ -14,13 +14,14 @@
     "license": "MIT",
     "scripts": {
         "build:js": "microbundle && browserify dist/index.umd.js -o dist/index.browser.js && terser --output dist/index.browser.min.js dist/index.browser.js",
-        "build:docs": "typedoc --out ./docs --mode file ./src",
+        "build:docs": "typedoc --out ./docs --mode file --target ES6 ./src",
         "build": "yarn build:js && yarn build:docs",
         "lint": "eslint src/index.ts"
     },
     "devDependencies": {
         "@types/bluebird": "^3.5.27",
         "@typescript-eslint/eslint-plugin": "^1.12.0",
+        "@typescript-eslint/parser": "^1.12.0",
         "browserify": "^16.3.0",
         "eslint": "^6.0.1",
         "eslint-config-google": "^0.13.0",

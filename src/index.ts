@@ -25,7 +25,7 @@
  */
 
 import axios from "axios"
-import { Promise } from "bluebird"
+import {Promise} from "bluebird"
 
 /**
  * Inject scripts into any website.
@@ -64,7 +64,7 @@ export function GGScript(src: string | Array<string>, {
 
         if (strategy === "inject") {
             src.forEach((i) => {
-                if (!(document.querySelector(injectLocation) || document.head)) reject(ReferenceError("Unable to find element in document."))
+                if (!(document.querySelector(injectLocation) || document.head)) reject(new ReferenceError("Unable to find element in document."))
 
                 // Get the type of source
                 const type = i.endsWith("css") ? "stylesheet" : "script"
@@ -113,7 +113,7 @@ export function GGScript(src: string | Array<string>, {
                     // Append link to head
                     const el = document.querySelector(injectLocation) || document.head
                     el.appendChild(link)
-                } else reject(TypeError("Invalid resource type specified."))
+                } else reject(new TypeError("Invalid resource type specified."))
             })
         } else if (strategy === "eval") {
             src.forEach((i) => {
@@ -130,7 +130,7 @@ export function GGScript(src: string | Array<string>, {
                 }).catch(() => reject(i))
             })
         } else if (strategy === "href") {
-            if (!window.location.href) reject(ReferenceError("Unable to find href object."))
+            if (!window.location.href) reject(new ReferenceError("Unable to find href object."))
             src.forEach((i) => {
                 // Fetch the content of the URL
                 axios.get(i).then((res: any) => {
@@ -146,7 +146,7 @@ export function GGScript(src: string | Array<string>, {
             })
         } else {
             // If invalid strategy provided.
-            reject(ReferenceError(`Invalid strategy: ${strategy}.`))
+            reject(new ReferenceError(`Invalid strategy: ${strategy}.`))
         }
     })
 }
